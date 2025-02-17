@@ -20,19 +20,19 @@ pipeline {
 									],
 								],
 								[
-									$class: 'UserIdentity',
-									email: "amsalkhan@iul.ac.in",
-									name: "Amsal Khan"
+									$class: 'userIdentity',
+									email: "vatshitesh1996@gmail.com",
+									name: "Hitesh Sharma"
 								],
 							],
-							userRemoteConfigs: [[url: 'https://github.com/Amsal1/devops_ci_cd.git']]						
+							userRemoteConfigs: [[url: 'https://github.com/hitesh211/SZ-devops_ci_cd.git']]						
 						]
 						)
 					} else if (env.BRANCH_NAME == 'dev'){	
 						checkout([
 							$class: 'GitSCM', 
 							branches: [[name: '*/dev']], 
-							userRemoteConfigs: [[url: 'https://github.com/Amsal1/devops_ci_cd.git']]
+							userRemoteConfigs: [[url: 'https://github.com/hitesh211/SZ-devops_ci_cd.git']]
 							])
 						}
 					}
