@@ -44,6 +44,7 @@ Make sure to add Inbound rules for 8080 port for Source 0.0.0.0/0
 
 2. Execute these commands to Install Docker:
 ```
+sudo dnf update -y
 sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 sudo dnf install docker-ce
 ```
@@ -53,8 +54,8 @@ sudo dnf install docker-ce
 sudo dnf update -y
 sudo dnf install wget -y
 sudo wget http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo -O /etc/yum.repos.d/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
-sudo  dnf install -y java-11-openjdk-devel
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+sudo  dnf install -y java-17-openjdk-devel
 sudo dnf install http://repo.okay.com.mx/centos/8/x86_64/release/daemonize-1.7.8-1.el8.x86_64.rpm
 sudo dnf install -y jenkins
 sudo systemctl start jenkins
@@ -63,7 +64,7 @@ sudo systemctl enable jenkins
 
 4. Give Jenkins user sudo priviledges:<br/>
 ```
-vi -f /etc/sudoers
+sudo vi /etc/sudoers
 ```
 and add the following line in the bottom of file:<br/>
 ```
