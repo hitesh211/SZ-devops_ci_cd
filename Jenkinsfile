@@ -105,7 +105,7 @@ pipeline {
 		success {
 			script {
 			if (env.BRANCH_NAME == 'master'){
-				withCredentials([usernamePassword(credentialsId: 'dcc67488-d003-49ef-96f5-f86cc224ec5d', passwordVariable: 'Monu@1234', usernameVariable: 'hitesh211')]) {
+				withCredentials([usernamePassword(credentialsId: 'dcc67488-d003-49ef-96f5-f86cc224ec5d', passwordVariable: 'Bholi@1234567', usernameVariable: 'hitesh211')]) {
 				sh('git push https://${hitesh211}:${Bholi@1234567}@git@github.com:hitesh211/SZ-devops_ci_cd.git HEAD:master')
 					}
 				} else if (env.BRANCH_NAME == 'dev'){
